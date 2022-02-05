@@ -29,13 +29,41 @@ const HomePage = () => {
                 <button type="submit" className="h-12 w-56 px-6 my-4 rounded-md shadow-lg bg-sky-700 text-blue-50 text-2xl uppercase tracking-wide">Apply Now</button>
             </div>
             <div className="flex p-8">
-                <div className="pl-20 w-5/6">
+                <div className="px-20 w-2/3">
                     <h1 className="font-display text-3xl py-4">Principles for Doing Business with Brothers</h1>
                     <div className="flex flex-col space-y-6">
                         <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ipsam, ipsa nam, consequatur aut possimus nemo omnis enim qui quae amet accusamus! Qui amet sed explicabo culpa, quo voluptatum dolores!</p>
                         <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ipsam, ipsa nam, consequatur aut possimus nemo omnis enim qui quae amet accusamus! Qui amet sed explicabo culpa, quo voluptatum dolores!</p>
                         <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ipsam, ipsa nam, consequatur aut possimus nemo omnis enim qui quae amet accusamus! Qui amet sed explicabo culpa, quo voluptatum dolores!</p>
                     </div>
+                </div>
+                <div className="w-1/3 p-8 text-xl">
+                    <ul className="px-20">
+                        <li><a href="#">ACCS</a></li>
+                        <li><a href="#">Animals</a></li>
+                        <li><a href="#">Artists</a></li>
+                        <li><a href="#">Athletics</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                        <li><a href="#">(tbd)</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

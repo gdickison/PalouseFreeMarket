@@ -1,15 +1,26 @@
+const tailwindcss = require('tailwindcss')
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
-    content: [
-        './pages/**/*.{html,js}',
-        './components/**/*.{html,js}',
-      ],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
         fontFamily: {
-            display: ['DM Serif Text', 'serif'],
+            display: ['Questrial', 'sans-serif'],
             body: ['Roboto', 'sans-serif']
         },
+        lineClamp: {
+          7: '7',
+          8: '8',
+          9: '9',
+          10: '10'
+        }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }

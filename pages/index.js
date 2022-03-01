@@ -20,7 +20,7 @@ const HomePage = () => {
           <Image className="shrink-0" src={group69}/>
         </div>
       </div>
-      <div className="flex justify-center bg-gray-100 py-2">
+      {/* <div className="flex justify-center bg-gray-100 py-2">
          <input type="text" className="border border-gray-300 h-14 w-5/6 px-6 rounded-md shadow-md" placeholder="Search by service or busness name" />
       </div>
       <div className="text-center bg-gray-100 h-40 py-4">
@@ -30,7 +30,7 @@ const HomePage = () => {
             <button className="h-12 w-56 px-6 my-4 rounded-md shadow-lg bg-sky-700 hover:bg-sky-900 text-blue-50 text-2xl uppercase tracking-wide">Apply Now</button>
           </a>
         </Link>
-      </div>
+      </div> */}
       <div className="flex p-8 justify-center">
         {/* <div className="w-1/3">
           <Principles />

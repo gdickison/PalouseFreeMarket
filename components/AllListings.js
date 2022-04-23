@@ -29,18 +29,18 @@ const AllListings = () => {
   }
 
   return (
-    <div className='flex flex-wrap justify-center'>
+    <div className='flex flex-col justify-center'>
       {console.log(listingData)}
       {listingData && listingData.map((data, i) => {
         return(
-          <div key={data._id} className="w-1/3 max-w-sm h-96 rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2">
+          <div key={data._id} className="max-h-fit rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2">
             <div className="relative px-6 py-4 h-full">
               <div className="font-bold text-sky-700 text-xl mb-2">{data.businessName}</div>
               <p className='my-4'>{data.ownerName}</p>
               <div className='my-2 text-[1rem] text-sky-800 hover:text-sky-600'>
                 <a href={`mailto:${data.email}`}>{data.email}</a>
               </div>
-              <div className='text-gray-600 text-base line-clamp-6 hover:cursor-pointer hover:italic' onClick={() => openModal(data._id)}>
+              <div className={`text-gray-600 text-base line-clamp-6 ${data.website ? 'mb-12' : 'mb-0'} hover:cursor-pointer hover:italic`} onClick={() => openModal(data._id)}>
                 {data.description}
               </div>
               {data.website &&

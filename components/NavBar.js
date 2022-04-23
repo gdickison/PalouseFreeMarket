@@ -16,7 +16,7 @@ export default function NavBar() {
     <Popover className="relative bg-sky-700">
       <nav className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
         <div className="flex justify-between items-center border-gray-100">
-          <div className="flex justify-start">
+          <div className="flex justify-start ml-4 md:ml-0">
             <Link href="/">
               <a className='flex items-center space-x-4'>
                 {/* <img

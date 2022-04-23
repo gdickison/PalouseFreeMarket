@@ -8,7 +8,7 @@ import AllListings from "../components/AllListings";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="max-w-[1600px]">
       <NavBar/>
       {/* <HeaderBar text="palouse free market"/> */}
       <div className="w-full flex flex-col justify-center items-center md:items-end md:pr-12 lg:pr-32 h-[450px] lg:h-[600px] 2xl:h-[900px] bg-gray-100" style={{ backgroundImage: "url('/images/bg-table.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>

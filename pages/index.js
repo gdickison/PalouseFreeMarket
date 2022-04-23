@@ -1,16 +1,11 @@
-import HeaderBar from "../components/HeaderBar";
 import NavBar from "../components/NavBar";
-import Principles from "../components/Principles";
-import Image from 'next/image'
 import Link from "next/link";
-import group69 from '../public/images/group69.png'
 import AllListings from "../components/AllListings";
 
 const HomePage = () => {
   return (
     <div className="max-w-[1600px]">
       <NavBar/>
-      {/* <HeaderBar text="palouse free market"/> */}
       <div className="w-full flex flex-col justify-center items-center md:items-end md:pr-12 lg:pr-32 h-[450px] lg:h-[600px] 2xl:h-[900px] bg-gray-100" style={{ backgroundImage: "url('/images/bg-table.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
         <div className="flex flex-col space-y-8 py-10 justify-center items-center md:items-end text-gray-100">
           <h1 className="font-display font-normal md:font-semibold text-6xl md:text-7xl text-center">Palouse Free Market</h1>
@@ -32,9 +27,6 @@ const HomePage = () => {
         </Link>
       </div>
       <div className="flex md:p-8 justify-center">
-        {/* <div className="w-1/3">
-          <Principles />
-        </div> */}
         <div className="p-8 text-xl">
           <AllListings/>
         </div>

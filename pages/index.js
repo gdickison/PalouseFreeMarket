@@ -31,7 +31,7 @@ const HomePage = () => {
           </a>
         </Link>
       </div>
-      <div className="flex p-8 justify-center">
+      <div className="flex md:p-8 justify-center">
         {/* <div className="w-1/3">
           <Principles />
         </div> */}

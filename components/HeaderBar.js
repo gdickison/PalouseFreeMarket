@@ -1,7 +1,7 @@
 const HeaderBar = ({ text }) => {
     return (
-        <div className="w-screen h-20 bg-sky-700 flex justify-center items-center">
-            <p className="uppercase text-white text-xl font-display tracking-widest">{text}</p>
+        <div className="w-screen h-min-content bg-sky-700 flex justify-center items-center">
+            <p className="uppercase py-1 text-white text-xl font-display tracking-widest">{text}</p>
         </div>
     )
 }

@@ -16,7 +16,7 @@ export default function NavBar() {
     <Popover className="relative bg-sky-700">
       <nav className="max-w-7xl mx-auto py-0 md:py-1 lg:py-0 px-4 md:px-8 lg:px-10">
         <div className="flex justify-between items-center border-gray-100">
-          <div className="flex justify-start ml-4 md:ml-0">
+          <div className="flex justify-start">
             <Link href="/">
               <a className='flex items-center space-x-4'>
                 <p className="uppercase py-1 text-white text-xl font-display tracking-widest">Palouse Free Market</p>
@@ -30,9 +30,9 @@ export default function NavBar() {
             </Popover.Button>
           </div>
           <div className="hidden lg:flex space-x-6 font-Condensed tracking-wider justify-end lg:flex-1 lg:w-0">
-            <Link href="/OurValues">
-              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/OurValues' ? 'border-b border-slate-100' : ''}`}>
-                Our Values
+            <Link href="/nine-principles">
+              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/nine-principles' ? 'border-b border-slate-100' : ''}`}>
+                Nine Principles
               </a>
             </Link>
             <Link href="/SubmitListing">
@@ -85,9 +85,9 @@ export default function NavBar() {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-1 gap-y-4 gap-x-8 font-Condensed tracking-wider">
-                <Link href="/OurValues">
+                <Link href="/nine-principles">
                   <a className="text-base font-medium text-slate-100 font-Condensed">
-                    Our Values
+                    Nine Principles
                   </a>
                 </Link>
                 <Link href="/SubmitListing">

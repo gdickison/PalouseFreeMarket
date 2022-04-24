@@ -5,6 +5,12 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'agreeToPrinciples',
+      title: 'Agree To Principles',
+      type: 'boolean',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'businessName',
       title: 'Business Name',
       type: 'string',

@@ -40,9 +40,9 @@ export default function NavBar() {
                 List Your Business
               </a>
             </Link>
-            <Link href="/FAQ">
-              <a className={`hidden lg:inline whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/FAQ' ? 'border-b border-slate-100' : ''}`}>
-                FAQ
+            <Link href="/terms">
+              <a className={`hidden lg:inline whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/terms' ? 'border-b border-slate-100' : ''}`}>
+                Terms
               </a>
             </Link>
             <Link href="mailto: palousefm@protonmail.com">
@@ -95,9 +95,9 @@ export default function NavBar() {
                     List Your Business
                   </a>
                 </Link>
-                <Link href="/FAQ">
+                <Link href="/terms">
                   <a className="text-base font-medium text-slate-100">
-                    FAQ
+                    Terms
                   </a>
                 </Link>
                 <a href="mailto: palousefm@protonmail.com"

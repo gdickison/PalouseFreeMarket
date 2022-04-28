@@ -4,8 +4,6 @@ import sanityClient from '../src/client'
 const AllListings = () => {
   const [listingData, setListingData] = useState(null);
 
-  
-
   useEffect(() => {
       sanityClient.fetch(`*[_type == "listing"] | order(businessName desc) {
           _id,
@@ -30,12 +28,12 @@ const AllListings = () => {
 
   return (
     <div className='flex flex-col justify-center'>
-      {console.log(listingData)}
+      {console.log('listingData', listingData)}
       {listingData && listingData.map((data, i) => {
         return(
-          <div key={data._id} className="max-h-fit rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2">
+          <div key={data._id} className="max-h-fit rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2 business-card">
             <div className="relative px-6 py-4 h-full">
-              <div className="font-bold text-sky-700 text-xl mb-2">{data.businessName}</div>
+              <div className="font-bold text-sky-700 text-xl mb-2 business-name">{data.businessName}</div>
               <p className='my-4'>{data.ownerName}</p>
               <div className='my-2 text-[1rem] text-sky-800 hover:text-sky-600'>
                 <a href={`mailto:${data.email}`}>{data.email}</a>

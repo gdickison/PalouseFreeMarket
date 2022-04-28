@@ -3,6 +3,20 @@ import Link from "next/link";
 import AllListings from "../components/AllListings";
 
 const HomePage = () => {
+  const filterList = () => {
+    const input = document.getElementById("listingFilter");
+    const filter = input.value.toUpperCase();
+    const businessNames = document.getElementsByClassName("business-name");
+    for (let i = 0; i< businessNames.length; i++) {
+      const textValue = businessNames[i].textContent || businessNames[i].innerText;
+      if(textValue.toUpperCase().indexOf(filter) > -1) {
+        businessNames[i].closest(".business-card").style.display = "";
+      } else {
+        businessNames[i].closest(".business-card").style.display = "none";
+      }
+    }
+  }
+
   return (
     <div className="max-w-[1600px]">
       <NavBar/>
@@ -14,7 +28,7 @@ const HomePage = () => {
           </p>
         </div>
         <div className="flex justify-center md:justify-end w-full md:w-4/5 lg:w-2/3 py-2">
-          <input type="text" className="border-2 border-sky-700 bg-gray-100 h-14 w-5/6 px-6 rounded-lg shadow-md placeholder:text-center placeholder:text-md md:placeholder:text-lg lg:placeholder:text-xl placeholder:text-gray-500" placeholder="Search by service or busness name" />
+          <input id="listingFilter" type="text" className="border-2 border-sky-700 bg-gray-100 h-14 w-5/6 px-6 rounded-lg shadow-md placeholder:text-center placeholder:text-md md:placeholder:text-lg lg:placeholder:text-xl placeholder:text-gray-500" placeholder="Search by service or busness name" onChange={filterList} />
         </div>
       </div>
       <div className="text-center bg-gray-100 h-40 py-4">

@@ -35,8 +35,8 @@ export default function NavBar() {
                 Nine Principles
               </a>
             </Link>
-            <Link href="/SubmitListing">
-              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/SubmitListing' ? 'border-b border-slate-100' : ''}`}>
+            <Link href="/submit-listing">
+              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/submit-listing' ? 'border-b border-slate-100' : ''}`}>
                 List Your Business
               </a>
             </Link>
@@ -90,7 +90,7 @@ export default function NavBar() {
                     Nine Principles
                   </a>
                 </Link>
-                <Link href="/SubmitListing">
+                <Link href="/submit-listing">
                   <a className="text-base font-medium text-slate-100">
                     List Your Business
                   </a>

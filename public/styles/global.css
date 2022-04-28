@@ -19,3 +19,12 @@ body {
     display: block;
   }
 }
+
+input[type=file]::file-selector-button {
+  padding: .2em .4em;
+  margin-right: 2rem;
+  border-radius: .2em;
+  background-color: #0369A1;
+  color: #F3F4F6;
+  transition: 1s;
+}

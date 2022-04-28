@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar"
 
 const FAQ = () => {
   return (
-    <div className="max-w-[1600px]">
+    <div className="w-screen max-w-[1600px]">
       <NavBar/>
       <div >
         <h1>FAQ, Terms & Conditions Go Here</h1>

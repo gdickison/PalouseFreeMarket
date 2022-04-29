@@ -2,6 +2,14 @@ import NavBar from "../components/NavBar";
 
 const SubmitListing = () => {
 
+  const checkUrlFormat = e => {
+    const websiteFormat = /^(http(s?):\/\/)?\w+([\.-]?\w+)*(\.\w{2,10})+/;
+    if(!e.target.value.match(websiteFormat)){
+      alert("A valid web address is required")
+      return
+    }
+  }
+
   const phoneNumberFormatter = (e) => {
     if(e.key === 'Tab'){
       return
@@ -57,7 +65,7 @@ const SubmitListing = () => {
           </div>
           <div className="flex justify-between w-80 md:w-4/5 lg:w-1/2">
             <label htmlFor="website">Website</label>
-            <input type="url" id="website" name="website" className="border border-gray-200 w-3/5 md:w-3/4 lg:w-4/5" />
+            <input type="text" id="website" name="website" className="border border-gray-200 w-3/5 md:w-3/4 lg:w-4/5" onBlur={checkUrlFormat}/>
           </div>
           <div className="flex justify-between w-80 md:w-4/5 lg:w-1/2">
             <label htmlFor="email">Email</label>

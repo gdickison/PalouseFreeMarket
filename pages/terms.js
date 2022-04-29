@@ -9,19 +9,19 @@ const Terms = () => {
         <h1 className="font-display text-2xl md:text-4xl py-4">Terms & Conditions</h1>
         <ul className="space-y-6 text-md md:text-xl font-body ">
           <li>
-            <p className="font-display text-2xl md:text-4xl uppercase">One</p>
+            <p className="font-display text-2xl uppercase">One</p>
             <p>
               After you submit your application the moderator will review it - we want to make sure you aren't some icky business. Once your listing is approved it will appear on the website.
             </p>
           </li>
           <li>
-            <p className="font-display text-2xl md:text-4xl uppercase">Two</p>
+            <p className="font-display text-2xl uppercase">Two</p>
             <p>
-              If you don't abide by the <Link href="/nine-principles"><a className="underline">Nine Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
+              If you don't abide by the <Link href="/ten-principles"><a className="underline">Nine Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
             </p>
           </li>
           <li>
-            <p className="font-display text-2xl md:text-4xl uppercase">Three</p>
+            <p className="font-display text-2xl uppercase">Three</p>
             That's it. Pretty simple, huh?
           </li>
         </ul>

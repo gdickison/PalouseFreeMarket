@@ -5,7 +5,7 @@ const OurValues = () => {
     <div className='w-screen max-w-[1600px]'>
       <NavBar/>
       <div className="flex flex-col my-2 pb-12 mx-4 md:mx-8 lg:mx-16 bg-gray-100">
-        <h1 className="font-display text-2xl md:text-4xl py-4">Nine Principles for Doing Business with Brothers</h1>
+        <h1 className="font-display text-2xl md:text-4xl py-4">Ten Principles for Doing Business with Brothers</h1>
         <ul className="space-y-6 text-md md:text-xl font-body ">
           <li>
             <p className="font-display text-2xl uppercase">One</p>

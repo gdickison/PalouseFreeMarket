@@ -32,8 +32,8 @@ export default {
       name: 'keywords',
       title: 'Keywords',
       description: 'Add keywords that will help people find your listing',
-      type: 'array',
-      of: [{type: 'string'}]
+      type: 'string'//,
+      // of: [{type: 'string'}]
     },
     {
       name: 'logo',
@@ -138,6 +138,12 @@ export default {
         scheme: ["https", "http", "mailto"], // Default is ["https", "http"]
       })
     },
+    {
+      name: 'approved',
+      title: 'Approved',
+      type: 'boolean',
+      initialValue: false
+    }
   ],
   preview: {
     select: {

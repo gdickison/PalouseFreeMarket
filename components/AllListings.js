@@ -5,7 +5,7 @@ const AllListings = () => {
   const [listingData, setListingData] = useState(null);
 
   useEffect(() => {
-      sanityClient.fetch(`*[_type == "listing"] | order(businessName desc) {
+      sanityClient.fetch(`*[_type == "listing" && approved]  | order(businessName desc) {
           _id,
           businessName,
           ownerName,
@@ -27,8 +27,7 @@ const AllListings = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center'>
-      {console.log('listingData', listingData)}
+    <div className='flex flex-col justify-center'
       {listingData && listingData.map((data, i) => {
         return(
           <div key={data._id} className="max-h-fit rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2 business-card">

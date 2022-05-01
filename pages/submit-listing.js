@@ -1,12 +1,12 @@
 import Link from "next/link";
-
 import NavBar from "../components/NavBar";
+import sanityClient from '../src/client'
 
 const SubmitListing = () => {
 
   const checkUrlFormat = e => {
     const websiteFormat = /^(http(s?):\/\/)?\w+([\.-]?\w+)*(\.\w{2,10})+/;
-    if(!e.target.value.match(websiteFormat)){
+    if(e.target.value && !e.target.value.match(websiteFormat)){
       alert("A valid web address is required")
       return
     }
@@ -37,12 +37,42 @@ const SubmitListing = () => {
     return `${phoneNumber.slice(0,3)}-${phoneNumber.slice(3,6)}-${phoneNumber.slice(6,9)}`;
   }
 
+  const sendToSanity = (e) => {
+    e.preventDefault()
+    const agreeToPrinciples = document.getElementById('agreeToPrinciples')
+    const businessName = document.getElementById('businessName')
+    const ownerName = document.getElementById('ownerName')
+    const description = document.getElementById('description')
+    const keywords = document.getElementById('keywords')
+    const website = document.getElementById('website')
+    const email = document.getElementById('email')
+    const emailPublish = document.getElementById('emailPublishYes')
+    const phone = document.getElementById('phone')
+    const phonePublish = document.getElementById('phonePublishYes')
+
+    const newDoc = {
+      _type: 'listing',
+      agreeToPrinciples: agreeToPrinciples.checked,
+      businessName: businessName.value,
+      ownerName: ownerName.value,
+      description: description.value,
+      keywords: keywords.value,
+      website: website.value,
+      email: email.value,
+      emailPublish: emailPublish.checked,
+      phone: phone.value,
+      phonePublish: phonePublish.checked
+    }
+
+    sanityClient.create(newDoc)
+  }
+
   return (
     <div className="w-screen max-w-[1600px]">
       <NavBar/>
       <div className="w-full my-2 pb-12 bg-gray-100">
         <h1 className="font-display text-2xl md:text-4xl py-4 text-center">Business Listing Application</h1>
-        <form className="flex flex-col space-y-6 p-0 text-md md:text-xl justify-center items-center" name="application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form className="flex flex-col space-y-6 p-0 text-md md:text-xl justify-center items-center" name="application" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={sendToSanity}>
           <input name="bot-field" hidden />
           <h1 className="text-xl md:text-2xl">Free Content</h1>
           <div className="flex justify-between items-center w-80 md:w-4/5 lg:w-1/2">
@@ -77,20 +107,20 @@ const SubmitListing = () => {
             <label htmlFor="emailPublish">Publish Email Address</label>
             <div className="flex items-center space-x-4">
               <label htmlFor="emailPublishYes">Yes</label>
-              <input type="radio" id="emailPublishYes" name="emailPublish" value="yes" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" />
+              <input type="radio" id="emailPublishYes" name="emailPublish" value="yes" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" required/>
               <label htmlFor="emailPublishNo">No</label>
               <input type="radio" id="emailPublishNo" name="emailPublish" value="no" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" />
             </div>
           </div>
           <div className="flex justify-between items-center w-80 md:w-4/5 lg:w-1/2">
             <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" className="border border-gray-200 w-3/5 md:w-3/4 lg:w-4/5" onKeyDown={phoneNumberFormatter} />
+            <input type="tel" id="phone" name="phone" className="border border-gray-200 w-3/5 md:w-3/4 lg:w-4/5" onKeyDown={phoneNumberFormatter} required/>
           </div>
           <div className="flex justify-between w-80 md:w-4/5 lg:w-1/2">
             <label htmlFor="phonePublish">Publish Phone Number</label>
             <div className="flex items-center space-x-4">
               <label htmlFor="phonePublishYes">Yes</label>
-              <input type="radio" id="phonePublishYes" name="phonePublish" value="yes" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" />
+              <input type="radio" id="phonePublishYes" name="phonePublish" value="yes" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" required/>
               <label htmlFor="phonePublishNo">No</label>
               <input type="radio" id="phonePublishNo" name="phonePublish" value="no" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" />
             </div>

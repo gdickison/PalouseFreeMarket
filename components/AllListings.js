@@ -27,7 +27,8 @@ const AllListings = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center'
+    <div className='flex flex-col justify-center'>
+      {console.log('listingData', listingData)}
       {listingData && listingData.map((data, i) => {
         return(
           <div key={data._id} className="max-h-fit rounded-lg border-green-300 border-2 overflow-hidden shadow-lg m-2 business-card">

@@ -1,8 +1,14 @@
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import sanityClient from '../src/client'
+import Alert from "../components/Alert";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 const SubmitListing = () => {
+  const [showAlert, setShowAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState()
+  const router = useRouter()
 
   const checkUrlFormat = e => {
     const websiteFormat = /^(http(s?):\/\/)?\w+([\.-]?\w+)*(\.\w{2,10})+/;
@@ -57,7 +63,7 @@ const SubmitListing = () => {
       ownerName: ownerName.value,
       description: description.value,
       keywords: keywords.value,
-      website: website.value,
+      website: website.value.indexOf("https://") === -1 ? "https://" + website.value : website.value,
       email: email.value,
       emailPublish: emailPublish.checked,
       phone: phone.value,
@@ -65,6 +71,14 @@ const SubmitListing = () => {
     }
 
     sanityClient.create(newDoc)
+    setShowAlert(true)
+    setAlertMessage("Thank you! Your submission will be reviewed within 24 hours and will appear on the website once it is approved.")
+  }
+
+  const closeAlert = () => {
+    setShowAlert(false)
+    setAlertMessage("")
+    router.push("/")
   }
 
   return (
@@ -156,6 +170,12 @@ const SubmitListing = () => {
           <input type="submit" className="w-80 border border-gray-200 bg-sky-700 hover:bg-sky-800 lg:hover:cursor-pointer text-gray-100 py-2 rounded-lg" />
         </form>
       </div>
+      {showAlert &&
+        <Alert
+          closeAlert={closeAlert}
+          message={alertMessage}
+        />
+      }
     </div>
   )
 }

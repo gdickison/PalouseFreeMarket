@@ -30,9 +30,9 @@ export default function NavBar() {
             </Popover.Button>
           </div>
           <div className="hidden lg:flex space-x-6 font-Condensed tracking-wider justify-end lg:flex-1 lg:w-0">
-            <Link href="/ten-principles">
-              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/ten-principles' ? 'border-b border-slate-100' : ''}`}>
-                Ten Principles
+            <Link href="/principles">
+              <a className={`whitespace-nowrap text-lg font-medium text-slate-100 hover:text-slate-300 hover:bg-sky-600 lg:px-2 lg:rounded-md ${router.pathname === '/principles' ? 'border-b border-slate-100' : ''}`}>
+                Principles
               </a>
             </Link>
             <Link href="/submit-listing">
@@ -85,9 +85,9 @@ export default function NavBar() {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-1 gap-y-4 gap-x-8 font-Condensed tracking-wider">
-                <Link href="/ten-principles">
+                <Link href="/principles">
                   <a className="text-base font-medium text-slate-100 font-Condensed">
-                    Ten Principles
+                    Principles
                   </a>
                 </Link>
                 <Link href="/submit-listing">

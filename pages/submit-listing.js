@@ -90,7 +90,7 @@ const SubmitListing = () => {
           <input name="bot-field" hidden />
           <h1 className="text-xl md:text-2xl">Free Content</h1>
           <div className="flex justify-between items-center w-80 md:w-4/5 lg:w-1/2">
-            <label className="w-60 md:w-80 lg:w-full text-left" htmlFor="agreeToPrinciples">I Agree to the <Link href="/ten-principles"><a className="underline">Ten Principles</a></Link> for Doing Business with Brothers</label>
+            <label className="w-60 md:w-80 lg:w-full text-left" htmlFor="agreeToPrinciples">I Agree to the <Link href="/principles"><a className="underline">Ten Principles</a></Link> for Doing Business with Brothers</label>
             <input type="checkbox" id="agreeToPrinciples" name="agreeToPrinciples" className="border border-gray-200 w-6 h-6 md:w-8 md:h-8" required />
           </div>
           <div className="flex justify-between w-80 md:w-4/5 lg:w-1/2">

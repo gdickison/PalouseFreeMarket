@@ -17,7 +17,7 @@ const Terms = () => {
           <li>
             <p className="font-display text-2xl uppercase">Two</p>
             <p>
-              If you don't abide by the <Link href="/ten-principles"><a className="underline">Ten Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
+              If you don't abide by the <Link href="/principles"><a className="underline">Ten Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
             </p>
           </li>
           <li>

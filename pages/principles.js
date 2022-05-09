@@ -5,7 +5,7 @@ const OurValues = () => {
     <div className='w-screen max-w-[1600px]'>
       <NavBar/>
       <div className="flex flex-col my-2 pb-12 mx-4 md:mx-8 lg:mx-16 bg-gray-100">
-        <h1 className="font-display text-2xl md:text-4xl py-4">Principles for Doing Business with Christians</h1>
+        <h1 className="font-display text-2xl md:text-4xl py-4">Palouse Free Market's Principles for Doing Business with Christians</h1>
         <ul className="space-y-6 text-md md:text-xl font-body ">
           <p>
             These principles are provided as an encouragement toward love and good works while doing business with fellow believers. We want people to have confidence that listed businesses have ethics that reflect Christian values.

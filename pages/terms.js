@@ -11,13 +11,13 @@ const Terms = () => {
           <li>
             <p className="font-display text-2xl uppercase">One</p>
             <p>
-              After you submit your application the moderator will review it - we want to make sure you aren't some icky business. Once your listing is approved it will appear on the website.
+              After you submit your application the moderator will review it. Once your listing is approved it will appear on the website.
             </p>
           </li>
           <li>
             <p className="font-display text-2xl uppercase">Two</p>
             <p>
-              If you don't abide by the <Link href="/principles"><a className="underline">Ten Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
+              If you don't abide by the <Link href="/principles"><a className="underline">Palouse Free Market's Prinicples</a></Link> your listing will be removed from the site. If you have paid for Premium Content a prorated amount will be refunded to you.
             </p>
           </li>
           <li>

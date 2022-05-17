@@ -10,6 +10,9 @@ const AllListings = () => {
           businessName,
           ownerName,
           email,
+          emailPublish,
+          phone,
+          phonePublish,
           description,
           website
       }`)
@@ -35,9 +38,16 @@ const AllListings = () => {
             <div className="relative px-6 py-4 h-full">
               <div className="font-bold text-sky-700 text-xl mb-2 business-name">{data.businessName}</div>
               <p className='my-4'>{data.ownerName}</p>
-              <div className='my-2 text-[1rem] text-sky-800 hover:text-sky-600'>
-                <a href={`mailto:${data.email}`}>{data.email}</a>
-              </div>
+              {data.emailPublish &&
+                <div className='my-2 text-[1rem] text-sky-800 hover:text-sky-600'>
+                  <a href={`mailto:${data.email}`}>{data.email}</a>
+                </div>
+              }
+              {data.phonePublish &&
+                <div className='my-2 text-[1rem] text-sky-800 hover:text-sky-600'>
+                  <span>{data.phone}</span>
+                </div>
+              }
               <div className={`text-gray-600 text-base line-clamp-6 ${data.website ? 'mb-12' : 'mb-0'} hover:cursor-pointer hover:italic`} onClick={() => openModal(data._id)}>
                 {data.description}
               </div>
